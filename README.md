@@ -4,4 +4,4 @@
 This is a sample telegram bot, wrote on python.
 
 ## Usage
-Don't have
+Лёрнинг инглиш фор Илья Курил
