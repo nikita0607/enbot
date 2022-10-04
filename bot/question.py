@@ -24,6 +24,9 @@ class SelectorParser(QuestionParser):
 
 class QuestionTypes(Enum):
     SELECTOR = SelectorParser
+    
+
+
 
     @classmethod
     def find_type(cls, string: str) -> Union[None, QuestionParser]:
