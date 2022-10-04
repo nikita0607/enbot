@@ -1,7 +1,7 @@
 # AnaBot
 
 ## Introduction
-This is a sample telegram bot, wrote on python.
+Привет, Никита додик?
 
 ## Usage
 Лёрнинг инглиш фор Илья Курил
