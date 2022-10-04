@@ -22,14 +22,15 @@ def func_to_run():
     return bot.send_message(some_id, 'Привет, Никита додик?')
 
 
-@bot.message_handler(commands = ['start'])
-def welcome(message):
-    #keyboard
+@bot.message_handler(commands=['start'])
+def welcome(message: types.Message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     item1 = types.KeyboardButton("Да")
     item2 = types.KeyboardButton("Конечно")
     markup.add(item1, item2)
+
     print(message.chat.id)
+    print(message.from_user.id)
 
     bot.send_message(message.chat.id, 'Привет, Никита додик?', reply_markup=markup)
 

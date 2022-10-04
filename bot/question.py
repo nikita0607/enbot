@@ -25,9 +25,6 @@ class SelectorParser(QuestionParser):
 class QuestionTypes(Enum):
     SELECTOR = SelectorParser
     
-
-
-
     @classmethod
     def find_type(cls, string: str) -> Union[None, QuestionParser]:
         for s in string.split():
@@ -39,6 +36,7 @@ class QuestionTypes(Enum):
 class Question:
     def __init__(self, _type=None):
         self.type = _type
+
 
 
 class QuestionStringParser:
