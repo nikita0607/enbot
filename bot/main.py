@@ -10,7 +10,7 @@ from telebot import types
 
 from typing import Dict, Tuple
 
-
+from carusels import *
 
 
 class Chat:
@@ -19,25 +19,12 @@ class Chat:
         self.admin_id = admin_id
         self.questions = []
 
-
-class Carusel(ABC):
-    @abstractmethod
-    def step(self, message: types.Message) -> Tuple[str, types.ReplyKeyboardMarkup]:
-        pass
-
-
-class SelectorCarusel(Carusel):
-    def __init__(self):
-        self.step_num = 0
- 
-    def step(self, message: types.Message) -> Tuple[str, types.ReplyKeyboardMarkup]:
-        if step == 0:
-            pass
-
     
 bot = telebot.TeleBot("5588347087:AAH3-qJmgvb6BYid-AzH4G_bEl2cb2pnsw0", threaded=True)
 chats: Dict[int, Chat] = {}
 admins: Dict[int, Chat] = {}
+carusels: Dict[int, Carusel] = {}
+
 
 def schedule_checker():  # рассылка
     while True:

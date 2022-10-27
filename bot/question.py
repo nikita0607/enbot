@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 from enum import Enum
 from typing import Union
 
@@ -13,7 +15,16 @@ class QuestionTypes(Enum):
                     return _type.value
 
 
-class Question:
-    def __init__(self, _type=None):
-        self.type = _type
+class ABCQuestion(ABC):
+    def __init__(self):
+        self.attachments = []
 
+
+    @abstractmethod
+    def send_to_chat(self, chat_id):
+        pass
+
+
+class SelectorQuestion:
+    def send_to_chat(self, cl, chat_id: int):
+        pass
